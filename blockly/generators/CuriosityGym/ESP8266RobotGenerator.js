@@ -30,158 +30,150 @@ goog.require('Blockly.Arduino');
 
 
 
-Blockly.Arduino.motorB_Speed = function() { return "abc"}
-Blockly.Arduino.motorA_Speed = function() { return "abc"}
-Blockly.Arduino.motorB_Direction = function() { 
+Blockly.Arduino.motorB_Speed = function() { return "abc" }
+Blockly.Arduino.motorA_Speed = function() { return "abc" }
+Blockly.Arduino.motorB_Direction = function() {
 
-Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
-var value_num = Blockly.Arduino.valueToCode(this, 'motorBDirection', Blockly.Arduino.ORDER_ATOMIC);
+    Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
+    var value_num = Blockly.Arduino.valueToCode(this, 'motorBDirection', Blockly.Arduino.ORDER_ATOMIC);
 
-	if(value_num==0)
-	{
-		var code = 'digitalWrite(D4,LOW);\n'
-	}
+    if (value_num == 0) {
+        var code = 'digitalWrite(D4,LOW);\n'
+    }
 
-	if(value_num==1)
-	{
-		var code = 'digitalWrite(D4,HIGH);\n'
-	}
+    if (value_num == 1) {
+        var code = 'digitalWrite(D4,HIGH);\n'
+    }
 
-	return code;
+    return code;
 }
 
-Blockly.Arduino.motorA_Direction = function() { 
+Blockly.Arduino.motorA_Direction = function() {
 
-Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
-var value_num = Blockly.Arduino.valueToCode(this, 'motorADirection', Blockly.Arduino.ORDER_ATOMIC);
+    Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
+    var value_num = Blockly.Arduino.valueToCode(this, 'motorADirection', Blockly.Arduino.ORDER_ATOMIC);
 
-if(value_num==0)
-{
-	var code = 'digitalWrite(D3,LOW);\n'
-}
+    if (value_num == 0) {
+        var code = 'digitalWrite(D3,LOW);\n'
+    }
 
-if(value_num==1)
-{
-	var code = 'digitalWrite(D3,HIGH);\n'
-}
+    if (value_num == 1) {
+        var code = 'digitalWrite(D3,HIGH);\n'
+    }
 
-return code;
+    return code;
 }
 
 
-Blockly.Arduino.MoveForward = function() { 
+Blockly.Arduino.MoveForward = function() {
 
-Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
-Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
-var inputSpeed= Blockly.Arduino.valueToCode(this, 'forwardSpeed', Blockly.Arduino.ORDER_ATOMIC);
-var functionBody= "void moveForward(int lspeed)\n"
-functionBody=functionBody + "{\n"
-functionBody=functionBody + "\tdigitalWrite(D3, HIGH);\n"
-functionBody=functionBody + "\tdigitalWrite(D4, HIGH);\n"
-functionBody=functionBody + "\tanalogWrite(D1, lspeed);\n"
-functionBody=functionBody + "\tanalogWrite(D2, lspeed);\n"
+    Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
+    Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
+    var inputSpeed = Blockly.Arduino.valueToCode(this, 'forwardSpeed', Blockly.Arduino.ORDER_ATOMIC);
+    var functionBody = "void moveForward(int lspeed)\n"
+    functionBody = functionBody + "{\n"
+    functionBody = functionBody + "\tdigitalWrite(D3, HIGH);\n"
+    functionBody = functionBody + "\tdigitalWrite(D4, HIGH);\n"
+    functionBody = functionBody + "\tanalogWrite(D1, lspeed);\n"
+    functionBody = functionBody + "\tanalogWrite(D2, lspeed);\n"
 
-functionBody=functionBody + "}\n"
-Blockly.Arduino.definitions_['moveforwardFunction']=functionBody;
-
-
-var code= "moveForward("+inputSpeed+");\n"	
+    functionBody = functionBody + "}\n"
+    Blockly.Arduino.definitions_['moveforwardFunction'] = functionBody;
 
 
-return code;
+    var code = "moveForward(" + inputSpeed + ");\n"
+
+
+    return code;
 }
 
-Blockly.Arduino.MoveReverse = function() { 
+Blockly.Arduino.MoveReverse = function() {
 
-Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
-Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
-var inputSpeed= Blockly.Arduino.valueToCode(this, 'reverseSpeed', Blockly.Arduino.ORDER_ATOMIC);
-var functionBody= "void moveReverse(int lspeed)\n"
-functionBody=functionBody + "{\n"
-functionBody=functionBody + "\tdigitalWrite(D3, LOW);\n"
-functionBody=functionBody + "\tdigitalWrite(D4, LOW);\n"
-functionBody=functionBody + "\tanalogWrite(D1, lspeed);\n"
-functionBody=functionBody + "\tanalogWrite(D2, lspeed);\n"
+    Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
+    Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
+    var inputSpeed = Blockly.Arduino.valueToCode(this, 'reverseSpeed', Blockly.Arduino.ORDER_ATOMIC);
+    var functionBody = "void moveReverse(int lspeed)\n"
+    functionBody = functionBody + "{\n"
+    functionBody = functionBody + "\tdigitalWrite(D3, LOW);\n"
+    functionBody = functionBody + "\tdigitalWrite(D4, LOW);\n"
+    functionBody = functionBody + "\tanalogWrite(D1, lspeed);\n"
+    functionBody = functionBody + "\tanalogWrite(D2, lspeed);\n"
 
-functionBody=functionBody + "}\n"
-Blockly.Arduino.definitions_['moveReverseFunction']=functionBody;
-
-
-var code= "moveReverse("+inputSpeed+");\n"	
+    functionBody = functionBody + "}\n"
+    Blockly.Arduino.definitions_['moveReverseFunction'] = functionBody;
 
 
-return code;
+    var code = "moveReverse(" + inputSpeed + ");\n"
+
+
+    return code;
 }
 
-Blockly.Arduino.TurnLeft = function() { 
+Blockly.Arduino.TurnLeft = function() {
 
-Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
-Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
-var inputSpeed= Blockly.Arduino.valueToCode(this, 'leftSpeed', Blockly.Arduino.ORDER_ATOMIC);
-var functionBody= "void turnLeft(int lspeed)\n"
-functionBody=functionBody + "{\n"
-functionBody=functionBody + "\tdigitalWrite(D3, HIGH);\n"
-functionBody=functionBody + "\tdigitalWrite(D4, LOW);\n"
-functionBody=functionBody + "\tanalogWrite(D1, lspeed);\n"
-functionBody=functionBody + "\tanalogWrite(D2, lspeed);\n"
+    Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
+    Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
+    var inputSpeed = Blockly.Arduino.valueToCode(this, 'leftSpeed', Blockly.Arduino.ORDER_ATOMIC);
+    var functionBody = "void turnLeft(int lspeed)\n"
+    functionBody = functionBody + "{\n"
+    functionBody = functionBody + "\tdigitalWrite(D3, HIGH);\n"
+    functionBody = functionBody + "\tdigitalWrite(D4, LOW);\n"
+    functionBody = functionBody + "\tanalogWrite(D1, lspeed);\n"
+    functionBody = functionBody + "\tanalogWrite(D2, lspeed);\n"
 
-functionBody=functionBody + "}\n"
-Blockly.Arduino.definitions_['moveLeftFunction']=functionBody;
-
-
-var code= "turnLeft("+inputSpeed+");\n"	
+    functionBody = functionBody + "}\n"
+    Blockly.Arduino.definitions_['moveLeftFunction'] = functionBody;
 
 
-return code;
+    var code = "turnLeft(" + inputSpeed + ");\n"
+
+
+    return code;
 }
 
-Blockly.Arduino.TurnRight = function() { 
+Blockly.Arduino.TurnRight = function() {
 
-Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
-Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
-var inputSpeed= Blockly.Arduino.valueToCode(this, 'rightSpeed', Blockly.Arduino.ORDER_ATOMIC);
-var functionBody= "void turnRight(int lspeed)\n"
-functionBody=functionBody + "{\n"
-functionBody=functionBody + "\tdigitalWrite(D3, LOW);\n"
-functionBody=functionBody + "\tdigitalWrite(D4, HIGH);\n"
-functionBody=functionBody + "\tanalogWrite(D1, lspeed);\n"
-functionBody=functionBody + "\tanalogWrite(D2, lspeed);\n"
+    Blockly.Arduino.setups_['setup_output_0'] = 'pinMode(D3, OUTPUT);';
+    Blockly.Arduino.setups_['setup_output_2'] = 'pinMode(D4, OUTPUT);';
+    var inputSpeed = Blockly.Arduino.valueToCode(this, 'rightSpeed', Blockly.Arduino.ORDER_ATOMIC);
+    var functionBody = "void turnRight(int lspeed)\n"
+    functionBody = functionBody + "{\n"
+    functionBody = functionBody + "\tdigitalWrite(D3, LOW);\n"
+    functionBody = functionBody + "\tdigitalWrite(D4, HIGH);\n"
+    functionBody = functionBody + "\tanalogWrite(D1, lspeed);\n"
+    functionBody = functionBody + "\tanalogWrite(D2, lspeed);\n"
 
-functionBody=functionBody + "}\n"
-Blockly.Arduino.definitions_['moveRightFunction']=functionBody;
-
-
-var code= "turnRight("+inputSpeed+");\n"	
+    functionBody = functionBody + "}\n"
+    Blockly.Arduino.definitions_['moveRightFunction'] = functionBody;
 
 
-return code;
+    var code = "turnRight(" + inputSpeed + ");\n"
+
+
+    return code;
 }
 
-Blockly.Arduino.Stop = function() { 
+Blockly.Arduino.Stop = function() {
 
 
 
-var functionBody= "void stop()\n"
-functionBody=functionBody + "{\n"
+    var functionBody = "void stop()\n"
+    functionBody = functionBody + "{\n"
 
-functionBody=functionBody + "\tanalogWrite(D1, 0);\n"
-functionBody=functionBody + "\tanalogWrite(D2, 0);\n"
+    functionBody = functionBody + "\tanalogWrite(D1, 0);\n"
+    functionBody = functionBody + "\tanalogWrite(D2, 0);\n"
 
-functionBody=functionBody + "}\n"
-Blockly.Arduino.definitions_['stopFunction']=functionBody;
-
-
-var code= "stop();\n"	
+    functionBody = functionBody + "}\n"
+    Blockly.Arduino.definitions_['stopFunction'] = functionBody;
 
 
-return code;
+    var code = "stop();\n"
+
+
+    return code;
 }
 
-Blockly.Arduino.Direction=function()
-{
-	var chosenDirection= this.getFieldValue('direction');	
-	return[chosenDirection,Blockly.Arduino.ORDER_ATOMIC]
+Blockly.Arduino.Direction = function() {
+    var chosenDirection = this.getFieldValue('direction');
+    return [chosenDirection, Blockly.Arduino.ORDER_ATOMIC]
 };
-
-
-
