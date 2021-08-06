@@ -189,6 +189,7 @@ Blockly.Blocks['variables_init'] = {
   contextMenuType_: 'variables_get',
   customContextMenu: Blockly.Blocks['variables_get'].customContextMenu
 };
+<<<<<<< HEAD
 
 
 // Added By DineshParmar
@@ -294,3 +295,5 @@ Blockly.Blocks['constcharblock'] = {
 
 
 
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50

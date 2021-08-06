@@ -44,7 +44,10 @@ Blockly.Arduino.variables_init = function() {
   var varName = Blockly.Arduino.variableDB_.getName(this.getFieldValue('VAR'),
       Blockly.Variables.NAME_TYPE);
   Blockly.Arduino.setups_['setup_var' + varName] = varName + ' = ' + argument0 + ';\n';
+<<<<<<< HEAD
   Blockly.Arduino.definitions_['initVar'+varName]='int '+varName+' = '+'0'+';\n';
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
   return '';
 };
 
@@ -56,6 +59,7 @@ Blockly.Arduino.variables_set = function() {
       Blockly.Variables.NAME_TYPE);
   return varName + ' = ' + argument0 + ';\n';
 };
+<<<<<<< HEAD
 
 // Created by Dinesh Parmar
 // Create a Char
@@ -93,3 +97,5 @@ Blockly.Arduino['charactergetter'] = function(block) {
   // TODO: Change ORDER_NONE to the correct strength.
   return [code, Blockly.Arduino.ORDER_NONE];
 };*/
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
