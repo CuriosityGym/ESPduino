@@ -152,6 +152,10 @@ Blockly.Blocks['set_color'] = {
  this.setHelpUrl("");
   }
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 
 //fill the RGB Strip //Added by Dinesh Parmar
 
@@ -185,6 +189,11 @@ Blockly.Blocks['strip_fill'] = {
   }
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 //OLED
 Blockly.Blocks['oled_begin'] = {
   init: function() {

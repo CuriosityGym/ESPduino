@@ -209,6 +209,10 @@ Blockly.Arduino.zeRGBa_rgb = function() {
      return"";
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 //Strip Fill Funtion //Added By Dinesh Parmar
 
 Blockly.Arduino['strip_fill'] = function(block) {
@@ -222,6 +226,11 @@ Blockly.Arduino['strip_fill'] = function(block) {
   return code;
 };
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 //servo
 Blockly.Arduino.servo_move = function() {
   var dropdown_pin = this.getFieldValue('PIN');

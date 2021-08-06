@@ -27,6 +27,10 @@ goog.provide('Blockly.Arduino.CGRobot');
 
 goog.require('Blockly.Arduino');
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 //Added By DineshParmar
 Blockly.Arduino['WiFiclient'] = function(block) {
 	// TODO: Assemble Arduino into code variable.
@@ -58,6 +62,12 @@ Blockly.Arduino['thingspeak_write_to_field'] = function(block) {
 	Blockly.Arduino.setups_['Thingspeak Begin'] = codeStatement+"\n";
 	return "";
   };  
+<<<<<<< HEAD
+=======
+=======
+
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 
 Blockly.Arduino["BlynkAUTH"]=function()
 {
@@ -121,6 +131,10 @@ Blockly.Arduino["RGBLED"]=function()
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 // Added By Dinesh Parmar
 
 // Adafruit Connection
@@ -173,3 +187,8 @@ Blockly.Arduino['adafruit_send_data_to_feed'] = function(block) {
 
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b

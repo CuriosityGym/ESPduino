@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 	/**
+=======
+<<<<<<< HEAD
+	/**
+=======
+/**
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
  * Visual Blocks Language
  *
  * Copyright 2012 Fred Lin.
@@ -36,6 +44,10 @@ var customProfile = {
   }
 };
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 //Added By Dinesh Parmar
 Blockly.Blocks['WiFiclient'] = {
 	init: function() {
@@ -89,6 +101,11 @@ Blockly.Blocks['WiFiclient'] = {
 	}
   };
   
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 
 //Added by Rupin 
 Blockly.Blocks['BlynkAUTH'] = {
@@ -170,6 +187,10 @@ Blockly.Blocks["RGBLED"]={
 
 
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 //Added By Dinesh Parmar
 // AdaFruit IO dashboard Connection
 
@@ -249,6 +270,11 @@ Blockly.Blocks['adafruit_send_data_to_feed'] = {
   };
 
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 
 
 

@@ -117,6 +117,10 @@ Blockly.Arduino.init = function(workspace) {
 		Blockly.Arduino.variableDB_.reset();
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 	/*var defvars = [];
 	var variables = Blockly.Variables.allVariables(workspace);
 	for (var x = 0; x < variables.length; x++) {
@@ -125,6 +129,19 @@ Blockly.Arduino.init = function(workspace) {
 				Blockly.Variables.NAME_TYPE) + ';\n';
 	}
 	Blockly.Arduino.definitions_['variables'] = defvars.join('\n');*/
+<<<<<<< HEAD
+=======
+=======
+	var defvars = [];
+	var variables = Blockly.Variables.allVariables(workspace);
+	for (var x = 0; x < variables.length; x++) {
+		defvars[x] = 'int ' +
+				Blockly.Arduino.variableDB_.getName(variables[x],
+				Blockly.Variables.NAME_TYPE) + ';\n';
+	}
+	Blockly.Arduino.definitions_['variables'] = defvars.join('\n');
+>>>>>>> 69eeee76cc03a386a614f0d0a78b2e26060e4c50
+>>>>>>> 9c8539873c66bd6e039e5ebd29409b04bf5cff4b
 };
 
 /**
